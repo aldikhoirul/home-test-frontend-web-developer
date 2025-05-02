@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import axios from "axios";
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 const schema = z.object({
   username: z.string().min(1, "Username wajib diisi"),
@@ -150,12 +151,12 @@ export default function RegisterForm() {
 
           <div className="text-center text-sm text-gray-600 pt-2">
             Already have an account?{" "}
-            <a
+            <Link
               href="/"
               className="font-medium text-blue-600 hover:text-blue-500 transition"
             >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
